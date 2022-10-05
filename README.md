@@ -12,3 +12,5 @@ Script to assemble, link, execute, and debug ARM assembly
 
 Script will leave assembled .o files as well as ARM binary, all with the same name as targetfile (NOT a.out).
 ```
+
+Depends on package `aarch64-linux-gnu-binutils`, `aarch64-linux-gnu-gcc`, `qemu-user`. To use debug, install `gdb-multiarch`.
