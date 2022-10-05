@@ -7,7 +7,7 @@ usage(){
 help(){
     echo "Script to assemble, link, execute, and debug ARM assembly"
     echo
-    echo "Usage: ./arm_compile [-h|-e|-l|-g] -f <targetfile>"
+    echo "Usage: ./arm_compile.sh [-h|-e|-l|-g] -f <targetfile>"
     echo "h    Print this help"
     echo "e    Execute after linking"
     echo "g    Debug with gdb (You will need to open another terminal to run gdb)"

@@ -1,9 +1,11 @@
 # arm_compile
+
 Script to assemble, link, execute, and debug ARM assembly
 
 ## Usage
+
 ```
-./arm_compile [-h|-e|-l|-g] -f <targetfile>
+./arm_compile.sh [-h|-e|-l|-g] -f <targetfile>
   h    Print this help
   e    Execute after linking
   g    Debug with gdb (You will need to open another terminal to run gdb)
