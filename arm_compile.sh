@@ -81,7 +81,7 @@ then
 fi
 qemu-aarch64 -L /usr/aarch64-linux-gnu/ -g 4321 $targetfile &
 echo "Starting debug on port 4321..." &
-gdb-multiarch --nh -q $targetfile\
+gdb-multiarch --nh -q $targetfile \
 -ex 'set disassemble-next-line on' \
 -ex 'target remote :4321' \
 -ex 'set solib-search-path/usr/aarch64-linux-gnu-lib/' \
