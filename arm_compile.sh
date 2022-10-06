@@ -32,6 +32,7 @@ gdb=""
 lc=""
 execute=0
 inputfile=""
+targetfile=""
 while getopts ":hgleo:f:" option; do
     case $option in
         h)
@@ -44,7 +45,12 @@ while getopts ":hgleo:f:" option; do
         g)
             gdb="-g ";;
         o)
-            targetfile="$OPTARG";;
+            targetfile="$OPTARG"
+            if [ -z $targetfile ]
+            then
+                echo "You must specify an output file. Type ./arm_compile.sh -h for help."
+                exit
+            fi;;
         f)
             inputfile="$OPTARG";;
         ?)
@@ -59,7 +65,7 @@ then
     exit
 fi
 
-if [ -z $targetfile]
+if [ -z $targetfile ]
 then
     targetfile=${inputfile%.*}
 fi
