@@ -46,7 +46,7 @@ while getopts ":hgleo:f:" option; do
             gdb="-g ";;
         o)
             targetfile="$OPTARG"
-            if [ -z $targetfile ]
+            if [ -z $targetfile ] || [ "$targetfile" == "-f" ] # If targetfile is empty (check if equal to -f becasue if -f is called after it then we get this)
             then
                 echo "You must specify an output file. Type ./arm_compile.sh -h for help."
                 exit
