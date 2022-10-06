@@ -10,8 +10,8 @@ help(){
     echo "Usage: ./arm_compile.sh [-h|-e|-l|-g] -f <targetfile>"
     echo "h    Print this help"
     echo "e    Execute after linking"
-    echo "g    Debug with gdb (You will need to open another terminal to run gdb)"
     echo "l    Link C library when compiling"
+    echo "g    Debug with gdb (You will need to open another terminal to run gdb)"
     echo "f    Specify target file"
     echo
     echo "Script will leave assembled .o files as well as ARM binary, all with the same name as targetfile (NOT a.out)."
