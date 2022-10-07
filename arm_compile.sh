@@ -97,4 +97,4 @@ gdb-multiarch --nh -q $targetfile \
 -ex 'set disassemble-next-line on' \
 -ex 'target remote :4321' \
 -ex 'set solib-search-path/usr/aarch64-linux-gnu-lib/' \
--ex 'layout reg'
+-ex 'layout regs'
