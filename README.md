@@ -9,7 +9,7 @@ assemble, link, execute, and debug ARM assembly
 author:  Ryan Monaghan, Jason Qiu
 version: 1.0 - 10/4/2024
 
-Usage: asmExec [-h|-e|-d|-l|-g|-p <number>] -f <targetfile>
+Usage: ./arm_compile [-h|-e|-d|-l|-g|-p <number>] -f <targetfile>
 e    execute after linking
 d    debug the program with gdb
 p    port number for debugging (default: 4321)
