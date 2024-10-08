@@ -5,17 +5,19 @@ Script to assemble, link, execute, and debug ARM assembly
 ## Usage
 
 ```
-Script to assemble, link, execute, and debug ARM assembly
+assemble, link, execute, and debug ARM assembly
+author:  Ryan Monaghan, Jason Qiu
+version: 1.0 - 10/4/2024
 
-Usage: ./arm_compile.sh [-h|-e|-l|-g|-o <file>] -f <targetfile>
-h    Print this help
-e    Execute after linking
-l    Link C library when compiling
-g    Debug with gdb (You will need to open another terminal to run gdb)
-o    Specify output file (default: same as target)
-f    Specify target file
+Usage: asmExec [-h|-e|-d|-l|-g|-p <number>] -f <targetfile>
+e    execute after linking
+d    debug the program with gdb
+p    port number for debugging (default: 4321)
+l    link C library when assembling
+g    assemble with debug information
+o    output executable name
+f    specify file to run
 
-Script will leave assembled .o files as well as ARM binary, all with the same name as targetfile (NOT a.out) unless -o specified.
 ```
 
 Depends on package `aarch64-linux-gnu-binutils`, `aarch64-linux-gnu-gcc`, `qemu-user`. To use debug, install `gdb-multiarch`.
